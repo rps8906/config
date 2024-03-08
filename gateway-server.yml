@@ -1,0 +1,28 @@
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    web:
+      enabled-by-default: true
+    gateway:
+      enabled: true
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG

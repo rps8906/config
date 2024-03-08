@@ -1,0 +1,18 @@
+spring:
+  boot:
+    admin:
+      context-path: /admin
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
